@@ -82,6 +82,33 @@
       }
       
       .protip { font-style: italic; font-size: 14px; }
+      
+      @-webkit-keyframes spinanimation {
+        0% {
+          -webkit-transform: rotateY(0);
+        }
+        100% {
+          -webkit-transform: rotateY(360deg);
+        }
+      }
+
+      #sponsors {
+        -webkit-perspective: 800; 
+        -webkit-perspective-origin: 50% 30%;
+        overflow: hidden;
+      }
+
+      .perspective {
+        -webkit-transform-style: preserve-3d;
+        -webkit-animation: spinanimation 10s infinite linear;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      img {
+        -webkit-backface-visibility: visible;
+        -webkit-transition: all .4s;
+      }
     </style>
   </head>
   <body>
@@ -91,15 +118,21 @@
     </div>
         
     <div id="info">
-      <p>May 12th + 13th 2011 (watch <a href="http://twitter.com/tacoconf">our twitters</a> for more details)</p>
+      <p>May 12th + 13th 2012 (watch <a href="http://twitter.com/tacoconf">our twitters</a> for more details)</p>
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tacoconf.com" data-text="A conference based on tacos and bicycles! #tacoconf">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       
       <p>Day 1: Oakland, California</p>
       <p>Day 2: San Francisco, California</p>
-      <p>Requirements: Bicycle + Cash. Bonus points if you bring your significant other and/or kids. TacoConf is fun for the whole family!</p>
+      <p>Requirements: Bicycle + some cash to buy tacos. Bonus points if you bring your significant other and/or kids. TacoConf is fun for the whole family!</p>
       <p>Be prepared to bicycle between taco trucks and taquerias and hear presentations from smart computer people</p>
       <p>Speakers: TBA (but they will be awesome)</p>
+      <div id="sponsors">
+        GENEROUSLY SPONSORED BY:
+        <div class="perspective">
+          <a href="http://spire.io"><img src="spire-logo.png"></a>
+        </div>
+      </div>
       <p class="protip">We are calling it a conf because a) it will be two days long and b) now you can justify taking time off work to go to a 'conference'</p>
       <p class="protip">If you are interested in sponsoring (we are willing to name legs of the bicycle journey after your software company) please reach out to <a href="http://twitter.com/mikeal">@mikeal</a> or <a href="http://twitter.com/maxogden">@maxogden</a>.</p>
       
