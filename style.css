@@ -5,20 +5,128 @@
 
 #first .bicycler { background: url(bicycler.png) 50% 100px no-repeat fixed; min-height: 800px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
 #first article { width: 100%; top: 0px; position: absolute; text-align: center; }
-#first article p,
-#first article a { color: #ccc; }
-#first article a { text-decoration: underline; }
-#first article a:hover { color: #fff; }
 
 #second { padding: 50px 0;}
-#second article { background: #fafafa; color: #000; width: 445px; margin-left: 100px; padding: 10px 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
-#second article p { margin-bottom: 25px; }
-#second article a { color: #ff0;}
+#second article { background: #fafafa; color: #000; width: 445px; margin-left: 100px; padding: 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 
 #third article {  background-color: #333; color: #fff; padding: 10px 20px; margin: 100px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
-#third article p { width: 300px; margin-bottom: 25px; }
 
-body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 0; margin: 0; }
+
+html {
+  margin: 0; padding: 0; 
+  -webkit-font-smoothing: antialiased;
+}
+
+img { border: none; margin: 10px 0px }
+
+body { 
+  margin: 0; padding: 0;
+  background: #F0F1EB;
+  color:#444;
+  font:14px/26px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#111;
+  line-height:1.5em;
+}
+
+a {
+  text-decoration:none;
+  color: #51483D;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 1px 0;
+}
+
+a:hover {
+  color: #000;
+  border-bottom: 1px solid #999;
+}
+
+
+p { margin: 0 0 10px 0; }
+p.info {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+
+h1, h2, h3, h4, h5, h6 { padding: 10px 0 5px 0; }
+h3, h4, h5, h6 { padding-top: 20px; }
+
+/* Title */
+h1 {
+  padding: 0 0 10px 0; margin: 0;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+  font-size: 35px;
+  line-height: 40px;
+}
+h2 { font-size: 120%; }
+
+#document h1 {
+  counter-reset: sub-section;
+  font-size: 30px;
+}
+#document h2 {
+  counter-reset: composite;
+}
+
+#document h1,
+#document h2,
+#document h3,
+#document h4,
+#document h5 {
+  font-weight: normal;
+  padding: 0;
+  line-height: 1.6em;
+}
+#document .edit h1,
+#document .edit h2,
+#document .edit h3 {
+  padding-top: 10px;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+#document h2 {
+  font-size: 20px;
+}
+#document h3 {
+  font-size: 16px;
+}
+.content-node.selected.text > .operations {
+  background: #459fc9;
+}
+#document .content-node.text .content {
+  padding: 10px 0;
+}
+.content-node.text > .content {
+  margin: 0 100px;
+}
+code {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 12px;
+  padding: 0px 3px;
+  background: white;
+  border: 1px solid #DDD;
+  zoom: 1;
+}
+#document strong,
+#document b {
+  font-weight: bold;
+}
+#document em,
+#document i {
+  font-style: italic;
+}
+#document p {
+  margin-bottom: 20px;
+  min-height: 22px;
+}
+#document ol {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+#document ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
 
 rect {
   fill: none;

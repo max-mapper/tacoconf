@@ -4,7 +4,7 @@ $(function() {
 
   function showMap(container) {
     app.map = new L.Map(container || 'mapbox', {zoom: 12, attributionControl: false, zoomControl: false})
-    var tiles ="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
+    var tiles ="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
     var layer = new L.TileLayer(tiles, {maxZoom: 16, minZoom: 3, detectRetina: true})
     app.map.setView(new L.LatLng(37.79513541839677, -122.34580993652344), 12)
     
@@ -33,17 +33,17 @@ $(function() {
   showMap('third')
   
   showEventOnMap({
-    name: "Code for America HQ",
-    location: new L.LatLng(37.77563768104929, -122.41376101970673),
-    address: "155 9th Street, SF",
-    description: "Day 2 talks are here<br>in the mid-afternoon"
+    name: "Mission Dolores Park",
+    location: new L.LatLng(37.76069823122058, -122.42650151252747),
+    address: '<a href="http://g.co/maps/dxmye">19th and Dolores St, SF</a>',
+    description: "Meet here at 11 AM on Sunday, May 13th"
   })
   
   showEventOnMap({
-    name: "Max's Warehouse",
-    location: new L.LatLng(37.793075235219945, -122.25217938423157),
-    address: "1209 8th Ave, Oakland",
-    description: "Day 1 talks are here<br>in the mid-afternoon"
+    name: "Henry J. Kaiser Memorial Park",
+    location: new L.LatLng(37.80884307543321, -122.27114260196686),
+    address: '<a href="http://g.co/maps/5xh3r">19th and & Rashida Muhammad St (near Telegraph), Oakland</a>',    
+    description: "Meet here at 11 AM on Saturday, May 12th"
   })
   
   var toppings = [
