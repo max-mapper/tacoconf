@@ -66,7 +66,7 @@ $(function() {
   ]
 
   var w = document.body.offsetWidth
-  var h = "800"
+  var h = "700"
 
   var nodes = d3.range(200).map(function() { return {radius: Math.random() * 12 + 4}; }),
       colors = ["#B34620", "#B34620", "#BE3B66", "#BFE165", "#7BA120"]
@@ -85,7 +85,7 @@ $(function() {
 
   var tacoLeft = w/2 - 373
   var taco = d3.select("#tacoconf-logo-g")
-    .attr('transform', 'translate(' + tacoLeft + ',-350)')
+    .attr('transform', 'translate(' + tacoLeft + ',-420)')
 
   var svg = d3.select("#floating-tacos svg")
     .attr("width", w)
