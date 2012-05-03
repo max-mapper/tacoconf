@@ -15,8 +15,8 @@ $(function() {
   function showEventOnMap(ev) {
     
     var avocadoIcon = L.Icon.extend({
-        iconUrl: 'images/avocado.png',
-        shadowUrl: 'images/marker-shadow.png',
+        iconUrl: 'avocado.png',
+        shadowUrl: 'marker-shadow.png',
         iconSize: new L.Point(97, 224),
         shadowSize: new L.Point(68, 95),
         iconAnchor: new L.Point(45, 223),
