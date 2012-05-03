@@ -1,0 +1,110 @@
+.story { height: 800px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
+
+#first { background: url(texture-noise.png) }
+#second { background: url(tacotruck.jpg) 50% 0 no-repeat fixed; }
+
+#first .bicycler { background: url(bicycler.png) 50% 100px no-repeat fixed; min-height: 800px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#first article { width: 100%; top: 0px; position: absolute; text-align: center; }
+#first article p,
+#first article a { color: #ccc; }
+#first article a { text-decoration: underline; }
+#first article a:hover { color: #fff; }
+
+#second { padding: 50px 0;}
+#second article { background: #fafafa; color: #000; width: 445px; margin-left: 100px; padding: 10px 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#second article p { margin-bottom: 25px; }
+#second article a { color: #ff0;}
+
+#third article {  background-color: #333; color: #fff; padding: 10px 20px; margin: 100px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#third article p { width: 300px; margin-bottom: 25px; }
+
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 0; margin: 0; }
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+line {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+circle {
+  stroke:#000000;
+  stroke-width:0.88133264px;
+}
+
+#info {
+  color: black;
+  text-align: center;
+  opacity: 0.95;
+  padding: 5px;
+  font-size: 20px;
+  position: relative;
+  background: white;
+  width: 50%;
+  margin: 40px auto;
+}
+
+.skewed {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  font: 900 10em "lato";
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  position: relative;                  
+  -webkit-transform: rotate(7deg) skew(7deg, 0);
+     -moz-transform: rotate(7deg) skew(7deg, 0);
+      -ms-transform: rotate(7deg) skew(7deg, 0);
+       -o-transform: rotate(7deg) skew(7deg, 0);
+          transform: rotate(7deg) skew(7deg, 0);
+}
+
+.skewed:after {
+  border-radius: .25em 0 0 .25em;
+  left: -2.5em;
+}
+.skewed:before {
+  border-radius: 0 .25em .25em 0;
+  right: -2.5em;
+}
+
+.skewed span {
+  position: relative;
+  text-shadow: 1px 2px 0 #666,
+               2px 3px 0 #888;
+  text-transform: uppercase;
+}
+
+.protip { font-style: italic; font-size: 14px; }
+
+@-webkit-keyframes spinanimation {
+  0% {
+    -webkit-transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+#sponsors {
+  -webkit-perspective: 800; 
+  -webkit-perspective-origin: 50% 30%;
+  overflow: hidden;
+}
+
+.perspective {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: spinanimation 10s infinite linear;
+  position: relative;
+  margin: 0 auto;
+}
+
+img {
+  -webkit-backface-visibility: visible;
+  -webkit-transition: all .4s;
+}
