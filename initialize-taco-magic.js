@@ -1,38 +1,31 @@
 $(function() {
   
   var app = {}
-  
-  var avocadoIcon = L.Icon.extend({
-      iconUrl: 'avocado.png',
-      shadowUrl: 'marker-shadow.png',
-      iconSize: new L.Point(97, 224),
-      shadowSize: new L.Point(1, 1),
-      iconAnchor: new L.Point(45, 223),
-      popupAnchor: new L.Point(0, -230)
-  });
-  
-  var tacoIcon = L.Icon.extend({
-      iconUrl: 'taco.png',
-      shadowUrl: 'marker-shadow.png',
-      iconSize: new L.Point(60, 60),
-      shadowSize: new L.Point(1, 1),
-      iconAnchor: new L.Point(30, 59),
-      popupAnchor: new L.Point(0, -65)
-  });
 
   function showMap(container) {
-    app.map = new L.Map(container || 'mapbox', {zoom: 13, attributionControl: false, zoomControl: false})
+    app.map = new L.Map(container || 'mapbox', {zoom: 12, attributionControl: false, zoomControl: false})
     var tiles ="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
     var layer = new L.TileLayer(tiles, {maxZoom: 16, minZoom: 3, detectRetina: true})
-    app.map.setView(new L.LatLng(37.79513541839677, -122.34580993652344), 13)
+    app.map.setView(new L.LatLng(37.79513541839677, -122.34580993652344), 12)
+    
     app.map.scrollWheelZoom.disable()
     app.map.addLayer(layer)
-    
   }
 
   function showEventOnMap(ev) {
+    
+    var avocadoIcon = L.Icon.extend({
+        iconUrl: 'avocado.png',
+        shadowUrl: 'marker-shadow.png',
+        iconSize: new L.Point(97, 224),
+        shadowSize: new L.Point(68, 95),
+        iconAnchor: new L.Point(45, 223),
+        popupAnchor: new L.Point(0, -230)
+    });
+    
     var markerLocation = ev.location
-    var marker = new L.Marker(markerLocation, {icon: ev.icon})
+    var avocado = new avocadoIcon()
+    var marker = new L.Marker(markerLocation, {icon: avocado})
     marker.bindPopup("<b>"+ev.name+"</b>" + "<br>" + ev.description + "<br>" + ev.address, {closeButton: false})
     app.map.addLayer(marker)
   }
@@ -40,69 +33,19 @@ $(function() {
   showMap('third')
   
   showEventOnMap({
-    name: "Xolo Taqueria",
-    location: new L.LatLng(37.808525208677395, -122.26969420909882),
-    address: '<a href="http://g.co/maps/a3wt5">1916 Telegraph Ave, Oakland</a>',    
-    description: "Tacos will be consumed here before the talks on saturday",
-    icon: new tacoIcon()
-  })
-  
-  showEventOnMap({
     name: "Mission Dolores Park",
     location: new L.LatLng(37.76069823122058, -122.42650151252747),
     address: '<a href="http://g.co/maps/dxmye">19th and Dolores St, SF</a>',
-    description: "Meet here at 11 AM on Sunday, May 13th",
-    icon: new avocadoIcon()
+    description: "Meet here at 11 AM on Sunday, May 13th"
   })
   
   showEventOnMap({
     name: "Henry J. Kaiser Memorial Park",
     location: new L.LatLng(37.80884307543321, -122.27114260196686),
-    address: '<a href="http://g.co/maps/5xh3r">19th and & Rashida Muhammad St (near Telegraph), Oakland</a>',
-    description: "Meet here at 11 AM on Saturday, May 12th",
-    icon: new avocadoIcon()
+    address: '<a href="http://g.co/maps/5xh3r">19th and & Rashida Muhammad St (near Telegraph), Oakland</a>',    
+    description: "Meet here at 11 AM on Saturday, May 12th"
   })
   
-  showEventOnMap({
-    name: "New Spot Taqueria",
-    location: new L.LatLng(37.76068974926786, -122.38799571990967),
-    address: '<a href="http://g.co/maps/7z23e">632 20th Street, SF</a>',
-    description: "Tacos will be consumed here after the talks on Sunday",
-    icon: new tacoIcon()
-  })
-  
-  showEventOnMap({
-    name: "Max's Warehouse && Rico's Taco Truck",
-    location: new L.LatLng(37.79338892937019, -122.2524905204773),
-    address: '1209 E 8th Ave, Oakland',
-    description: "Talks are given here, and Rico's will sell tacos during the talks",
-    icon: new tacoIcon()
-  })
-  
-  showEventOnMap({
-    name: "Assorted 24th St. Taquerias",
-    location: new L.LatLng(37.752529660262965, -122.41250038146973),
-    address: '24th St, Mission District, SF',
-    description: "Tacos will be consumed at various taquerias before the talks on sunday",
-    icon: new tacoIcon()
-  })
-  
-  showEventOnMap({
-    name: "Taqueria Sinaloa",
-    location: new L.LatLng(37.7847593, -122.237956),
-    address: '<a href="http://g.co/maps/cn9k8">2138 International Boulevard, Oakland</a>',
-    description: "Tacos will be consumed here before the talks on Saturday",
-    icon: new tacoIcon()
-  })
-  
-  showEventOnMap({
-    name: "Code for America HQ & Treat Machine",
-    location: new L.LatLng(37.77560376008604, -122.41374492645264),
-    address: '<a href="http://g.co/maps/5bqap">155 9th St, SF</a>',
-    description: "Talks given here, and Treat Machine will sell vegan tacos during the talks",
-    icon: new tacoIcon()
-  })
-
   var toppings = [
     {
       d:"m 743.85545,1007.0041 c -1.02192,-0.9654 0.74685,-1.3882 -1.90097,-2.6245 -11.24358,-5.24947 -11.98631,6.2146 -3.95715,9.9634 4.89618,2.286 12.29991,-3.4117 5.85812,-7.3389 z",
