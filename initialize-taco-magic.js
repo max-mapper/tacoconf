@@ -83,7 +83,7 @@ $(function() {
     name: "Assorted 24th St. Taquerias",
     location: new L.LatLng(37.752529660262965, -122.41250038146973),
     address: '24th St, Mission District, SF',
-    description: "Tacos will be consumed at various taquerias before the talks on sunday",
+    description: "Tacos will be consumed at various taquerias (Vallarta, Guadalajara, Taqueria San Francisco) before the talks on sunday",
     icon: new tacoIcon()
   })
   
