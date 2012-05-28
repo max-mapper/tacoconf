@@ -1,12 +1,12 @@
-.story { height: 800px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
+.section { height: 700px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
 
 #first { background: url(texture-noise.png) }
 #second { background: url(tacotruck.jpg) 50% 0 no-repeat fixed; }
 
-#first .bicycler { background: url(bicycler.png) 50% 100px no-repeat fixed; min-height: 800px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#first .bicycler { padding: 0; margin: 0; overflow: auto; position: absolute; margin: 0 auto; -webkit-transition: all 1s; -webkit-animation: cyclist 10s infinite linear;}
 #first article { width: 100%; top: 0px; position: absolute; text-align: center; }
 
-#second { padding: 50px 0;}
+#second { padding: 50px 0; height: 1000px !important; }
 #second article { background: #fafafa; color: #000; width: 445px; margin-left: 100px; padding: 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 
 #third article {  background-color: #333; color: #fff; padding: 10px 20px; margin: 100px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
@@ -196,6 +196,21 @@ circle {
   }
   100% {
     -webkit-transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes cyclist {
+  0% {
+    height: 400px;
+    right: 100%;
+  }
+  50% {
+    height: 100px;
+    right: 50%;
+  }
+  100% {
+    height: 400px;
+    right: -20%;
   }
 }
 
