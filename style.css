@@ -1,24 +1,16 @@
-.section { padding: 0; margin: 0; width: 100%; max-width: 1920px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
+.section { height: 450px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
 
-#first { height: 400px; background: url(texture-noise.png) }
-#floating-taco { margin-top: 0px; }
-#second { background: url(tacotruck.jpg) 50% 0 no-repeat; }
+#first { background: url(texture-noise.png) }
+#second { background: url(tacotruck.jpg) 50% 0 no-repeat fixed; }
 
 #first .bicycler { padding: 0; margin: 0; overflow: auto; position: absolute; margin: 0 auto; -webkit-transition: all 1s; -webkit-animation: cyclist 10s infinite linear;}
 #first article { width: 100%; top: 0px; position: absolute; text-align: center; }
 
-#second { padding: 50px 0; height: 510px !important; }
-#third article { background: #fafafa; color: #000; width: 800px; margin: 0 auto; padding: 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#second { padding: 50px 0; height: 750px !important; }
+#second article { background: #fafafa; color: #000; width: 445px; margin-left: 100px; padding: 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 
-#video-container {
-  text-align:center;
+#third article {  background-color: #333; color: #fff; padding: 10px 20px; margin: 100px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 
-}
-#tacovideo {
-  border-style:solid;
-  border-width:5px;
-  border-color:white;
-}
 
 html {
   margin: 0; padding: 0; 
@@ -223,7 +215,6 @@ circle {
 }
 
 #sponsors {
-  width: 400px;
   -webkit-perspective: 800; 
   -webkit-perspective-origin: 50% 30%;
   overflow: hidden;

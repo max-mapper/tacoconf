@@ -1,72 +1,54 @@
 <html 11>
   <head>
-    <title>TACO CONF 2012</title>
+    <title>TACO CONF 2013</title>
+    <script type="text/javascript" src="deps-min.js"></script>
+    <script type="text/javascript" src="initialize-taco-magic.js"></script>
     
+    <link rel="stylesheet" href="leaflet.css">
     <link rel="stylesheet" href="style.css">
-    <script src="popcorn.js"></script>
-    <script src="jquery-1.7.2.min.js"></script>
     
-    <script>
-      // ensure the web page (DOM) has loaded
-      document.addEventListener("DOMContentLoaded", function () {
-
-        // Create a popcorn instance by calling Popcorn("#id-of-my-video")
-        var pop = Popcorn("#tacovideo");
-        var advertHandler = function () {
-          pop.pause()
-          var x = $('<img src="https://s3.amazonaws.com/tenconf/sponsors/spire.png" style="position:absolute;"></img>')
-            , t = $('#tacovideo')
-            , pos = t.offset()
-            ;
-          x.appendTo('#video-container')
-          x.css({left:pos.left + 5, top:pos.top - 6})
-          x.css({height:t.height(), width:t.width() + 1})
-          setTimeout(function () {
-            x.hide()
-            pop.play()
-            pop.off('play', advertHandler)
-          }, 2000)
-        }
-        pop.on('play', advertHandler)
-       
-      }, false);
-    </script>
   </head>
   <body>
-    
-    <section id="first" class="section" data-speed="8" data-type="background">      
+    <section id="first" class="section" data-speed="8" data-type="background">
+      <img class="bicycler" src="penny_farthing.gif">
       <article>
-        <div id="floating-taco">
-          <img src="logo.png">
+        <div id="floating-tacos">
+          <img src="logo.png"></img>
         </div>
       </article>
     </section>
-
-    <section id="second" class="section" data-type="background">
-        <div id="video-container">
-          <video id="tacovideo" height="480" poster="./tacovideo.png" controls>
-            <source src="https://s3.amazonaws.com/tenconf/TacoMontage480.m4v">
-            <source src="https://s3.amazonaws.com/tenconf/tacomontagefinal.ogv">
-          </video>
-          <div id="footnotediv"></div>
-        </div>
-        <img src="https://s3.amazonaws.com/tenconf/sponsors/spire.png" style="visibility:hidden;"></img>
-    </section>
-    
-    <section id="third" class="section" data-type="background">
+      
+    <section id="second" class="section" data-speed="4" data-type="background">
       <article>
+        <h1>Bicycle around Oakland, learn about tacos and then eat them!</h1>
         <p>
-          The first TacoConf was a success! Watch the above video or read <a href='http://www.mikealrogers.com/posts/tacos-on-parade.html'>this article</a>. Videos of the presentations will be posted here in the coming weeks.
-          <div id="sponsors">
-            GENEROUSLY SPONSORED BY:
-            <div class="perspective">
-              <a href="http://spire.io"><img src="spire-logo.png"></a>
-            </div>
-          </div>
-          <img style="width:100%" src="http://curlycastfiles.s3.amazonaws.com/TacoConfCollage1.png">
-          <img style="width:100%" src="http://curlycastfiles.s3.amazonaws.com/TacoConfCollage2.png">
+          <strong>Sunday, May 5</strong> starting at 11AM. Meet at Snow park - <a href="http://goo.gl/maps/V3xVC"> Downtown near Lake Merritt, Oakland</a>
         </p>
+        <p>
+          Here is a video recap of TacoConf 2012: <a target='_blank' href="http://www.youtube.com/watch?v=kQICO7uz_2k">http://www.youtube.com/watch?v=kQICO7uz_2k</a>
+        </p>
+        <p>
+          TacoConf is a one day free event in Oakland that is designed to expose people to the amazing taco spots around town. Bring your bicycle, bring some friends, bring some cash and spend Cinco de Mayo 2013 casually riding in a bike party around downtown and Fruitvale.
+        </p>
+          Throughout the day we will learn about the history of some taquerias, learn about mexican food culture and try tacos from trucks, foodie upstarts and family owned taquerias.
+        </p>
+        <h2>What to bring</h2>
+        <p>
+          <ul>
+            <li>a bicycle</li>
+            <li>friends or family (with bicycles)</li>
+            <li>there is no admission fee, but you need to bring cash to buy tacos (20 or 30 bucks should be fine, tacos will range from $1.25 a piece to $4)</li>
+          </ul>
+        </p>
+        <p>If you don't have a bicycle there are places like <a target='_blank' href="http://wearemanifesto.com/contact.php">Manifesto Bikes in Oakland</a> that rent daily for around 25 bucks.</p>
+        <p>Watch <a href="http://twitter.com/tacoconf">our twitters</a> for more details or <a href="https://www.facebook.com/events/170803896410500/171119453045611/?ref=notif&notif_t=plan_mall_activity" target="_blank">view the event on Facebook</a></p>
+        <a  target='_blank' href="https://twitter.com/share" class="twitter-share-button" data-url="http://tacoconf.com" data-text="A conference based on tacos and bicycles! #tacoconf">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </article>
+    </section>
+    
+    <section id="third" class="section" data-speed="6" data-type="background" data-offsetY="250">      
+      <div class="photograph" data-type="sprite" data-offsetY="1250" data-Xposition="25%" data-speed="2"></div>
     </section>
     
     <script type="text/javascript">
