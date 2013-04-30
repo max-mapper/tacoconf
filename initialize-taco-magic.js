@@ -40,10 +40,10 @@ $(function() {
   showMap('third')
   
   showEventOnMap({
-    name: "Oakland",
-    location: new L.LatLng(37.808525208677395, -122.26969420909882),
-    address: 'Downtown',    
-    description: "We will start downtown. Venue TBA",
+    name: "La Borinquena",
+    location: new L.LatLng(37.80128785959947, -122.27722945819704),
+    address: '7th and Jefferson St.',    
+    description: "We will end at this taqueria that has been in business since 1944, one of only two left in the neighborhood.",
     icon: new tacoIcon()
   })
   
@@ -58,16 +58,24 @@ $(function() {
   showEventOnMap({
     name: "Taqueria Mi Rancho",
     location: new L.LatLng(37.79338892937019, -122.2524905204773),
-    address: 'South of Lake Merritt',
+    address: '1st ave and 15th st',
     description: "AKA 'Tacos by the Lake'. We will stop here on the way to Fruitvale.",
     icon: new tacoIcon()
   })
 
   showEventOnMap({
-    name: "Fruitvale",
-    location: new L.LatLng(37.7847593, -122.237956),
-    address: 'International Blvd and ~30th',
-    description: "We will visit Fruitvale, home to dozens of great taquerias and trucks. Venues TBA",
+    name: "El Grullo/Tacos Alonzo",
+    location: new L.LatLng(37.78508003870297, -122.22838041111447),
+    address: '27th and Foothill',
+    description: "There are two great taco trucks within a block of each other here that we will stop by and try",
+    icon: new tacoIcon()
+  })
+
+  showEventOnMap({
+    name: "Taqueria Sinaloa",
+    location: new L.LatLng(37.7783929161717, -122.22718261242674),
+    address: 'Fruitvale Ave and E 12th',
+    description: "This bright orange and green taqueria has a large indoor seating area as well as a taco truck parked outside. It is across the street from the Fruitvale BART station.",
     icon: new tacoIcon()
   })
 

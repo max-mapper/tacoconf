@@ -7,7 +7,7 @@
 #first article { width: 100%; top: 0px; position: absolute; text-align: center; }
 
 #second { padding: 50px 0; height: 750px !important; }
-#second article { background: #fafafa; color: #000; width: 445px; margin-left: 100px; padding: 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#second article { background: #fafafa; color: #000; width: 550px; margin-left: 100px; padding: 20px; line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 
 #third article {  background-color: #333; color: #fff; padding: 10px 20px; margin: 100px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 
