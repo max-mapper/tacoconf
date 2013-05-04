@@ -64,18 +64,26 @@ $(function() {
   })
 
   showEventOnMap({
-    name: "El Grullo/Tacos Alonzo",
-    location: new L.LatLng(37.78508003870297, -122.22838041111447),
-    address: '27th and Foothill',
-    description: "There are two great taco trucks within a block of each other here that we will stop by and try",
+    name: "Mi Grullense",
+    location: new L.LatLng(37.77850071230849, -122.22863199999995),
+    address: '30th and International',
+    description: "There are two taco trucks located in the Goodwill parking lot on International",
     icon: new tacoIcon()
   })
 
   showEventOnMap({
-    name: "Taqueria Sinaloa",
-    location: new L.LatLng(37.7783929161717, -122.22718261242674),
-    address: 'Fruitvale Ave and E 12th',
-    description: "This bright orange and green taqueria has a large indoor seating area as well as a taco truck parked outside. It is across the street from the Fruitvale BART station.",
+    name: "Tacos Sinaloa",
+    location: new L.LatLng(37.785128038339515, -122.23782918465577),
+    address: 'International and 22nd',
+    description: "This bright orange taqueria has a lot of outdoor seating as well as 2 taco trucks parked outside.",
+    icon: new tacoIcon()
+  })
+  
+  showEventOnMap({
+    name: "Fruitvale Public Market",
+    location: new L.LatLng(37.77640918026431, -122.22405335915528),
+    address: 'Across from Fruitvale BART Station',
+    description: "There is delicious homemade Mexican style ice cream here!",
     icon: new tacoIcon()
   })
 
